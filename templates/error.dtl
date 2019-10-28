@@ -1,0 +1,6 @@
+<html>
+<body>
+    <p>Error {{error}}!</p>
+    <p>Message: {{error_description}}</p>
+</body>
+</html>
