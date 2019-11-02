@@ -4,5 +4,8 @@
 <p>
 Login with: <a href='/login/saml'>SAML2</a>
 </p>
+<p>
+Session ID: {{session_id}}
+</p>
 </body>
 </html>
