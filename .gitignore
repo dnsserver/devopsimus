@@ -3,3 +3,4 @@ _rel/
 .erlang.mk/
 ebin/
 priv/
+.DS_Store
