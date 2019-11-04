@@ -24,8 +24,12 @@ send_response({login, Req, State}) ->
 
 send_response({response, SAMLResponse, Req, State}) ->
     {_AwsConf, Resp} = saml_utils:try_aws_saml(SAMLResponse),
-    {ok, Body} = loginsaml_dtl:render(Resp),
-    page_utils:show_page(Body, Req, State).
+    {ok, Repl0} = session_utils:store(login, true, Req),
+    {ok, Repl1} = session_utils:store(aws, Resp, Repl0),
+    Repl = cowboy_req:reply(303, 
+                            #{<<"location">> => <<"/">>},
+                            Repl1),
+    {ok, Repl, State}.
     
 
 

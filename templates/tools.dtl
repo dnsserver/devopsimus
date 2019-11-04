@@ -1,0 +1,11 @@
+<html>
+<body>
+<h1>Tools</h1>
+<p>
+Session ID: {{session_id}}
+</p>
+<p>
+Data: {{data}}
+</p>
+</body>
+</html>

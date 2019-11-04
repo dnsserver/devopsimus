@@ -2,7 +2,8 @@ PROJECT = devopsimus
 PROJECT_DESCRIPTION = Simple Web Application for AWS Temp credentials with SAML.
 PROJECT_VERSION = 0.2.0
 
-DEPS = cowboy jsx erlydtl erlcloud
+DEPS = cowboy jsx erlydtl erlcloud #cowboy_session
+#dep_cowboy_session = git https://github.com/chvanikoff/cowboy_session.git master
 dep_erlydtl = git https://github.com/erlydtl/erlydtl 0.12.1
 dep_erlcloud = git https://github.com/dnsserver/erlcloud.git master
 #dep_erlcloud = ln $PATH_TO_ERLCLOUD/erlcloud

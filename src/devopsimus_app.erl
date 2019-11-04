@@ -8,6 +8,7 @@ start(_Type, _Args) ->
     Routes = [
               {'_',[
                     {"/login/saml", saml_handler,[]},
+                    {"/tools", tools_handler, []},
                     {"/",index_handler,[]}
                    ]
               }
@@ -22,6 +23,8 @@ start(_Type, _Args) ->
         ],
         #{env => #{dispatch => Dispatch}}
     ),
+    session_utils:start(),
+    %cowboy_session:start(),
 	devopsimus_sup:start_link().
 
 stop(_State) ->

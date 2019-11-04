@@ -1,11 +1,15 @@
 <html>
 <body>
 <h1>Welcome to {{application_name}}</h1>
+{% if not login %}
 <p>
 Login with: <a href='/login/saml'>SAML2</a>
 </p>
+{% endif %}
+{% if login %}
 <p>
-Session ID: {{session_id}}
+<a href="/tools">Tools</a>
 </p>
+{% endif %}
 </body>
 </html>
